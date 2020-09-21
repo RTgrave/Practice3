@@ -1,3 +1,5 @@
+using System.Reflection.Emit;
+using System.Data;
 using System.Text.RegularExpressions;
 using Internal;
 using System;
@@ -18,7 +20,9 @@ namespace Practice3
             Console.ToDouble(Console.ReadLine(n));
             for (int i = 1; i <= n; i++)
             {
-                x= (x-Match.Pow(x, i))/i;
+                x= x - (Match.Pow(x, i)/i);
+                x= x + (Match.Pow(x, [i+1])/[i+1]);
+                Console.ToDouble(Console.ReadLine(x));
             }
         }
     }
